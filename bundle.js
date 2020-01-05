@@ -1180,8 +1180,6 @@ function (_super) {
     var _this = _super !== null && _super.apply(this, arguments) || this;
 
     _this.showModal = function () {
-      console.log(_this);
-
       _this.setState({
         isActive: "is-active"
       });
@@ -1326,7 +1324,6 @@ function (_super) {
   }
 
   Card.prototype.render = function () {
-    console.log(this.props.paper);
     return react_default.a.createElement("div", {
       className: "column"
     }, react_default.a.createElement("div", {
