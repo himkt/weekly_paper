@@ -1537,7 +1537,24 @@ function (_super) {
 
   Paper.prototype.render = function () {
     if (!this.state.filt) {
-      return react_default.a.createElement("div", null, " Loading... ");
+      return react_default.a.createElement("section", {
+        style: {
+          padding: 3 + 'rem'
+        }
+      }, react_default.a.createElement("div", {
+        className: "container"
+      }, react_default.a.createElement("div", {
+        className: "columns"
+      }, react_default.a.createElement("div", {
+        className: "column"
+      }), react_default.a.createElement("div", {
+        className: "column is-one-third"
+      }, react_default.a.createElement("progress", {
+        className: "progress is-medium is-dark",
+        max: "100"
+      }, "Loading...")), react_default.a.createElement("div", {
+        className: "column"
+      }))));
     }
 
     return react_default.a.createElement("div", null, react_default.a.createElement(molecules_form, {
