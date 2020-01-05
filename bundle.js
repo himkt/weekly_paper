@@ -1229,7 +1229,11 @@ function (_super) {
 
   ModalButton.prototype.render = function () {
     if (!this.state) return react_default.a.createElement("span", null);
-    return react_default.a.createElement("div", null, react_default.a.createElement("div", {
+    return react_default.a.createElement("div", {
+      style: {
+        paddingRight: 0.5 + 'rem'
+      }
+    }, react_default.a.createElement("div", {
       className: ["modal", this.state.isActive].join(" ")
     }, react_default.a.createElement("div", {
       className: "modal-background"
@@ -1250,10 +1254,12 @@ function (_super) {
     }, react_default.a.createElement("button", {
       className: "button is-primary",
       onClick: this.closeModal
-    }, "Close")))), react_default.a.createElement("button", {
+    }, "Close")))), react_default.a.createElement("a", {
+      href: "#"
+    }, react_default.a.createElement("span", {
       className: "tag is-info",
       onClick: this.showModal
-    }, "BibTex"));
+    }, "BibTex")));
   };
 
   return ModalButton;
@@ -1326,22 +1332,17 @@ function (_super) {
     }, react_default.a.createElement("div", {
       className: "card",
       key: this.props.idx
-    }, react_default.a.createElement(modal, {
-      title: this.props.paper['Title'],
-      firstAuthor: this.createFirstAuthor(),
-      authors: this.createAuthors(),
-      year: this.props.paper['Year'],
-      source: this.props.paper['Source'],
-      paperType: this.props.paper['Paper type']
-    }), react_default.a.createElement("div", {
+    }, react_default.a.createElement("div", {
+      className: "card-header"
+    }, react_default.a.createElement("p", {
+      className: "card-header-title"
+    }, react_default.a.createElement("time", null, "Added: ", this.props.paper.Timestamp))), react_default.a.createElement("div", {
       className: "card-content"
     }, react_default.a.createElement("p", {
       className: "card-header-title"
     }, react_default.a.createElement("a", {
       href: this.props.paper.Link
-    }, this.props.paper.Title)), react_default.a.createElement("time", null, "Added: ", this.props.paper.Timestamp)), react_default.a.createElement("div", {
-      className: "card-content"
-    }, react_default.a.createElement("p", {
+    }, this.props.paper.Title)), react_default.a.createElement("p", {
       className: "card-text"
     }, this.props.paper.Note)), react_default.a.createElement("footer", {
       className: "card-footer"
@@ -1349,11 +1350,21 @@ function (_super) {
       className: "card-footer-item"
     }, react_default.a.createElement("div", {
       className: "tags are-medium"
+    }, react_default.a.createElement(modal, {
+      title: this.props.paper['Title'],
+      firstAuthor: this.createFirstAuthor(),
+      authors: this.createAuthors(),
+      year: this.props.paper['Year'],
+      source: this.props.paper['Source'],
+      paperType: this.props.paper['Paper type']
+    }), react_default.a.createElement("a", {
+      href: this.props.paper['Issue link'],
+      target: "_blank",
+      style: {
+        paddingRight: 0.5 + 'rem'
+      }
     }, react_default.a.createElement("span", {
       className: "tag is-success is-light"
-    }, react_default.a.createElement("a", {
-      href: this.props.paper['Issue link'],
-      target: "_blank"
     }, "Issue")), react_default.a.createElement("span", {
       className: "tag is-primary is-light"
     }, this.props.paper.Source_short), react_default.a.createElement("span", {
