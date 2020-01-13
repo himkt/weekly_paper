@@ -1389,6 +1389,69 @@ function (_super) {
 }(react["Component"]);
 
 /* harmony default export */ var molecules_form = (form_Form);
+// CONCATENATED MODULE: ./src/atoms/loading.tsx
+var loading_extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (b.hasOwnProperty(p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+
+
+var loading_LoadingContainer =
+/** @class */
+function (_super) {
+  loading_extends(LoadingContainer, _super);
+
+  function LoadingContainer() {
+    return _super !== null && _super.apply(this, arguments) || this;
+  }
+
+  LoadingContainer.prototype.render = function () {
+    return react_default.a.createElement("section", {
+      style: {
+        padding: 3 + 'rem'
+      }
+    }, react_default.a.createElement("div", {
+      className: "container"
+    }, react_default.a.createElement("div", {
+      className: "columns"
+    }, react_default.a.createElement("div", {
+      className: "column"
+    }), react_default.a.createElement("div", {
+      className: "column is-one-third"
+    }, react_default.a.createElement("progress", {
+      className: "progress is-medium is-dark",
+      max: "100"
+    }, "Loading...")), react_default.a.createElement("div", {
+      className: "column"
+    }))));
+  };
+
+  return LoadingContainer;
+}(react["Component"]);
+
+/* harmony default export */ var loading = (loading_LoadingContainer);
 // CONCATENATED MODULE: ./src/templates/paper.tsx
 var paper_extends = undefined && undefined.__extends || function () {
   var _extendStatics = function extendStatics(d, b) {
@@ -1420,23 +1483,27 @@ var paper_extends = undefined && undefined.__extends || function () {
 
 
 
-var toJSON = function toJSON(records) {
-  var fSplit = function fSplit(r) {
-    return r.split('\t');
-  };
 
-  var recordsArray = records.map(fSplit);
-  var columns = recordsArray[0];
-  var papers = recordsArray.slice(1);
+var toJSON = function toJSON(records) {
+  var recordsArray = records.map(function (r) {
+    return r.split('\t');
+  });
+  var columns = recordsArray[0],
+      papers = recordsArray.slice(1);
   var papersJson = papers.map(function (paper) {
     var dict = {};
 
     for (var i = 0; i < columns.length; i++) {
-      dict[columns[i].trim()] = paper[i] || '';
+      var _key = columns[i].trim();
+
+      var _paper = (paper[i] || '').trim();
+
+      dict[_key] = _paper;
     }
 
     return dict;
   });
+  papersJson.reverse();
   return papersJson;
 };
 
@@ -1492,24 +1559,7 @@ function (_super) {
 
   Paper.prototype.render = function () {
     if (!this.state.filt) {
-      return react_default.a.createElement("section", {
-        style: {
-          padding: 3 + 'rem'
-        }
-      }, react_default.a.createElement("div", {
-        className: "container"
-      }, react_default.a.createElement("div", {
-        className: "columns"
-      }, react_default.a.createElement("div", {
-        className: "column"
-      }), react_default.a.createElement("div", {
-        className: "column is-one-third"
-      }, react_default.a.createElement("progress", {
-        className: "progress is-medium is-dark",
-        max: "100"
-      }, "Loading...")), react_default.a.createElement("div", {
-        className: "column"
-      }))));
+      return react_default.a.createElement(loading, null);
     }
 
     return react_default.a.createElement("div", null, react_default.a.createElement(molecules_form, {
