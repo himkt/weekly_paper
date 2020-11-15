@@ -232,7 +232,7 @@ if (true) {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/** @license React v16.13.1
+/** @license React v16.14.0
  * react.production.min.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -256,7 +256,7 @@ exports.Component=F;exports.Fragment=r;exports.Profiler=u;exports.PureComponent=
 exports.cloneElement=function(a,b,c){if(null===a||void 0===a)throw Error(C(267,a));var e=l({},a.props),d=a.key,g=a.ref,k=a._owner;if(null!=b){void 0!==b.ref&&(g=b.ref,k=J.current);void 0!==b.key&&(d=""+b.key);if(a.type&&a.type.defaultProps)var f=a.type.defaultProps;for(h in b)K.call(b,h)&&!L.hasOwnProperty(h)&&(e[h]=void 0===b[h]&&void 0!==f?f[h]:b[h])}var h=arguments.length-2;if(1===h)e.children=c;else if(1<h){f=Array(h);for(var m=0;m<h;m++)f[m]=arguments[m+2];e.children=f}return{$$typeof:p,type:a.type,
 key:d,ref:g,props:e,_owner:k}};exports.createContext=function(a,b){void 0===b&&(b=null);a={$$typeof:w,_calculateChangedBits:b,_currentValue:a,_currentValue2:a,_threadCount:0,Provider:null,Consumer:null};a.Provider={$$typeof:v,_context:a};return a.Consumer=a};exports.createElement=M;exports.createFactory=function(a){var b=M.bind(null,a);b.type=a;return b};exports.createRef=function(){return{current:null}};exports.forwardRef=function(a){return{$$typeof:x,render:a}};exports.isValidElement=O;
 exports.lazy=function(a){return{$$typeof:A,_ctor:a,_status:-1,_result:null}};exports.memo=function(a,b){return{$$typeof:z,type:a,compare:void 0===b?null:b}};exports.useCallback=function(a,b){return Z().useCallback(a,b)};exports.useContext=function(a,b){return Z().useContext(a,b)};exports.useDebugValue=function(){};exports.useEffect=function(a,b){return Z().useEffect(a,b)};exports.useImperativeHandle=function(a,b,c){return Z().useImperativeHandle(a,b,c)};
-exports.useLayoutEffect=function(a,b){return Z().useLayoutEffect(a,b)};exports.useMemo=function(a,b){return Z().useMemo(a,b)};exports.useReducer=function(a,b,c){return Z().useReducer(a,b,c)};exports.useRef=function(a){return Z().useRef(a)};exports.useState=function(a){return Z().useState(a)};exports.version="16.13.1";
+exports.useLayoutEffect=function(a,b){return Z().useLayoutEffect(a,b)};exports.useMemo=function(a,b){return Z().useMemo(a,b)};exports.useReducer=function(a,b,c){return Z().useReducer(a,b,c)};exports.useRef=function(a){return Z().useRef(a)};exports.useState=function(a){return Z().useState(a)};exports.version="16.14.0";
 
 
 /***/ }),
@@ -264,7 +264,7 @@ exports.useLayoutEffect=function(a,b){return Z().useLayoutEffect(a,b)};exports.u
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/** @license React v16.13.1
+/** @license React v16.14.0
  * react-dom.production.min.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -551,11 +551,11 @@ function ik(a,b,c,d,e){var f=c._reactRootContainer;if(f){var g=f._internalRoot;i
 wc=function(a){if(13===a.tag){var b=hg(Gg(),150,100);Ig(a,b);ek(a,b)}};xc=function(a){13===a.tag&&(Ig(a,3),ek(a,3))};yc=function(a){if(13===a.tag){var b=Gg();b=Hg(b,a,null);Ig(a,b);ek(a,b)}};
 za=function(a,b,c){switch(b){case "input":Cb(a,c);b=c.name;if("radio"===c.type&&null!=b){for(c=a;c.parentNode;)c=c.parentNode;c=c.querySelectorAll("input[name="+JSON.stringify(""+b)+'][type="radio"]');for(b=0;b<c.length;b++){var d=c[b];if(d!==a&&d.form===a.form){var e=Qd(d);if(!e)throw Error(u(90));yb(d);Cb(d,e)}}}break;case "textarea":Kb(a,c);break;case "select":b=c.value,null!=b&&Hb(a,!!c.multiple,b,!1)}};Fa=Mj;
 Ga=function(a,b,c,d,e){var f=W;W|=4;try{return cg(98,a.bind(null,b,c,d,e))}finally{W=f,W===V&&gg()}};Ha=function(){(W&(1|fj|gj))===V&&(Lj(),Dj())};Ia=function(a,b){var c=W;W|=2;try{return a(b)}finally{W=c,W===V&&gg()}};function kk(a,b){var c=2<arguments.length&&void 0!==arguments[2]?arguments[2]:null;if(!gk(b))throw Error(u(200));return jk(a,b,null,c)}var lk={Events:[Nc,Pd,Qd,xa,ta,Xd,function(a){jc(a,Wd)},Da,Ea,id,mc,Dj,{current:!1}]};
-(function(a){var b=a.findFiberByHostInstance;return Yj(n({},a,{overrideHookState:null,overrideProps:null,setSuspenseHandler:null,scheduleUpdate:null,currentDispatcherRef:Wa.ReactCurrentDispatcher,findHostInstanceByFiber:function(a){a=hc(a);return null===a?null:a.stateNode},findFiberByHostInstance:function(a){return b?b(a):null},findHostInstancesForRefresh:null,scheduleRefresh:null,scheduleRoot:null,setRefreshHandler:null,getCurrentFiber:null}))})({findFiberByHostInstance:tc,bundleType:0,version:"16.13.1",
+(function(a){var b=a.findFiberByHostInstance;return Yj(n({},a,{overrideHookState:null,overrideProps:null,setSuspenseHandler:null,scheduleUpdate:null,currentDispatcherRef:Wa.ReactCurrentDispatcher,findHostInstanceByFiber:function(a){a=hc(a);return null===a?null:a.stateNode},findFiberByHostInstance:function(a){return b?b(a):null},findHostInstancesForRefresh:null,scheduleRefresh:null,scheduleRoot:null,setRefreshHandler:null,getCurrentFiber:null}))})({findFiberByHostInstance:tc,bundleType:0,version:"16.14.0",
 rendererPackageName:"react-dom"});exports.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED=lk;exports.createPortal=kk;exports.findDOMNode=function(a){if(null==a)return null;if(1===a.nodeType)return a;var b=a._reactInternalFiber;if(void 0===b){if("function"===typeof a.render)throw Error(u(188));throw Error(u(268,Object.keys(a)));}a=hc(b);a=null===a?null:a.stateNode;return a};
 exports.flushSync=function(a,b){if((W&(fj|gj))!==V)throw Error(u(187));var c=W;W|=1;try{return cg(99,a.bind(null,b))}finally{W=c,gg()}};exports.hydrate=function(a,b,c){if(!gk(b))throw Error(u(200));return ik(null,a,b,!0,c)};exports.render=function(a,b,c){if(!gk(b))throw Error(u(200));return ik(null,a,b,!1,c)};
 exports.unmountComponentAtNode=function(a){if(!gk(a))throw Error(u(40));return a._reactRootContainer?(Nj(function(){ik(null,null,a,!1,function(){a._reactRootContainer=null;a[Od]=null})}),!0):!1};exports.unstable_batchedUpdates=Mj;exports.unstable_createPortal=function(a,b){return kk(a,b,2<arguments.length&&void 0!==arguments[2]?arguments[2]:null)};
-exports.unstable_renderSubtreeIntoContainer=function(a,b,c,d){if(!gk(c))throw Error(u(200));if(null==a||void 0===a._reactInternalFiber)throw Error(u(38));return ik(a,b,c,!1,d)};exports.version="16.13.1";
+exports.unstable_renderSubtreeIntoContainer=function(a,b,c,d){if(!gk(c))throw Error(u(200));if(null==a||void 0===a._reactInternalFiber)throw Error(u(38));return ik(a,b,c,!1,d)};exports.version="16.14.0";
 
 
 /***/ }),
@@ -618,11 +618,9 @@ options.singleton = false;
 
 var update = api(content, options);
 
-var exported = content.locals ? content.locals : {};
 
 
-
-module.exports = exported;
+module.exports = content.locals || {};
 
 /***/ }),
 /* 8 */
@@ -804,7 +802,7 @@ function applyToTag(style, options, obj) {
     style.removeAttribute('media');
   }
 
-  if (sourceMap && btoa) {
+  if (sourceMap && typeof btoa !== 'undefined') {
     css += "\n/*# sourceMappingURL=data:application/json;base64,".concat(btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))), " */");
   } // For old IE
 
@@ -1070,58 +1068,58 @@ function (_super) {
   }
 
   Header.prototype.render = function () {
-    return react["createElement"]("nav", {
+    return /*#__PURE__*/react["createElement"]("nav", {
       className: "navbar is-transparent is-info"
-    }, react["createElement"]("div", {
+    }, /*#__PURE__*/react["createElement"]("div", {
       className: "container"
-    }, react["createElement"]("div", {
+    }, /*#__PURE__*/react["createElement"]("div", {
       className: "navbar-brand"
-    }, react["createElement"]("a", {
+    }, /*#__PURE__*/react["createElement"]("a", {
       className: "navbar-item",
       href: "https://himkt.github.io/profile"
-    }, react["createElement"]("img", {
+    }, /*#__PURE__*/react["createElement"]("img", {
       src: logo,
       alt: "himkt.github.io/profile",
       width: "93"
-    }))), react["createElement"]("div", {
+    }))), /*#__PURE__*/react["createElement"]("div", {
       id: "navbarExampleTransparentExample",
       className: "navbar-menu"
-    }, react["createElement"]("div", {
+    }, /*#__PURE__*/react["createElement"]("div", {
       className: "navbar-end"
-    }, react["createElement"]("a", {
+    }, /*#__PURE__*/react["createElement"]("a", {
       className: "navbar-item",
       href: "https://himkt.github.io/profile"
-    }, "Home"), react["createElement"]("div", {
+    }, "Home"), /*#__PURE__*/react["createElement"]("div", {
       className: "navbar-item has-dropdown is-hoverable"
-    }, react["createElement"]("a", {
+    }, /*#__PURE__*/react["createElement"]("a", {
       className: "navbar-link"
-    }, "Links"), react["createElement"]("div", {
+    }, "Links"), /*#__PURE__*/react["createElement"]("div", {
       className: "navbar-dropdown is-boxed is-right"
-    }, react["createElement"]("a", {
+    }, /*#__PURE__*/react["createElement"]("a", {
       className: "navbar-item",
       href: "https://twitter.com/himkt"
-    }, "Twitter"), react["createElement"]("a", {
+    }, "Twitter"), /*#__PURE__*/react["createElement"]("a", {
       className: "navbar-item",
       href: "https://twitter.com/hyperparams"
-    }, "Twitter (en)"), react["createElement"]("a", {
+    }, "Twitter (en)"), /*#__PURE__*/react["createElement"]("a", {
       className: "navbar-item",
       href: "https://github.com/himkt"
-    }, "GitHub"), react["createElement"]("a", {
+    }, "GitHub"), /*#__PURE__*/react["createElement"]("a", {
       className: "navbar-item",
       href: "https://note.com/himkt"
-    }, "Note"), react["createElement"]("a", {
+    }, "Note"), /*#__PURE__*/react["createElement"]("a", {
       className: "navbar-item",
       href: "https://qiita.com/klis"
-    }, "Qiita"), react["createElement"]("a", {
+    }, "Qiita"), /*#__PURE__*/react["createElement"]("a", {
       className: "navbar-item",
       href: "https://instagram.com/himamako"
-    }, "Instagram"), react["createElement"]("hr", {
+    }, "Instagram"), /*#__PURE__*/react["createElement"]("hr", {
       className: "navbar-divider"
-    }), react["createElement"]("a", {
+    }), /*#__PURE__*/react["createElement"]("a", {
       className: "navbar-item is-active",
       href: "https://himkt.github.io/profile/resume.pdf",
       target: "_blank"
-    }, "Resume"), react["createElement"]("a", {
+    }, "Resume"), /*#__PURE__*/react["createElement"]("a", {
       className: "navbar-item is-active",
       href: "https://himkt.github.io/interest"
     }, "Interest")))))));
@@ -1215,33 +1213,33 @@ function (_super) {
   };
 
   ModalButton.prototype.render = function () {
-    if (!this.state) return react_default.a.createElement("span", null);
-    return react_default.a.createElement("div", {
+    if (!this.state) return /*#__PURE__*/react_default.a.createElement("span", null);
+    return /*#__PURE__*/react_default.a.createElement("div", {
       style: {
         paddingRight: 0.5 + 'rem'
       }
-    }, react_default.a.createElement("div", {
+    }, /*#__PURE__*/react_default.a.createElement("div", {
       className: ["modal", this.state.isActive].join(" ")
-    }, react_default.a.createElement("div", {
+    }, /*#__PURE__*/react_default.a.createElement("div", {
       className: "modal-background"
-    }), react_default.a.createElement("div", {
+    }), /*#__PURE__*/react_default.a.createElement("div", {
       className: "modal-card"
-    }, react_default.a.createElement("header", {
+    }, /*#__PURE__*/react_default.a.createElement("header", {
       className: "modal-card-head"
-    }, react_default.a.createElement("p", {
+    }, /*#__PURE__*/react_default.a.createElement("p", {
       className: "modal-card-title"
-    }, "BibTex entry")), react_default.a.createElement("section", {
+    }, "BibTex entry")), /*#__PURE__*/react_default.a.createElement("section", {
       className: "modal-card-body"
-    }, react_default.a.createElement("pre", {
+    }, /*#__PURE__*/react_default.a.createElement("pre", {
       style: {
         whiteSpace: "pre"
       }
-    }, this.createBibTexEntry())), react_default.a.createElement("footer", {
+    }, this.createBibTexEntry())), /*#__PURE__*/react_default.a.createElement("footer", {
       className: "modal-card-foot"
-    }, react_default.a.createElement("button", {
+    }, /*#__PURE__*/react_default.a.createElement("button", {
       className: "button is-primary",
       onClick: this.closeModal
-    }, "Close")))), react_default.a.createElement("a", null, react_default.a.createElement("span", {
+    }, "Close")))), /*#__PURE__*/react_default.a.createElement("a", null, /*#__PURE__*/react_default.a.createElement("span", {
       className: "tag is-info",
       onClick: this.showModal
     }, "BibTex")));
@@ -1292,7 +1290,7 @@ function (_super) {
     _this.createKeywords = function () {
       if (_this.props.paper.Keywords == '') return '';
       return _this.props.paper.Keywords.split(',').map(function (e, idx) {
-        return react_default.a.createElement("span", {
+        return /*#__PURE__*/react_default.a.createElement("span", {
           key: idx,
           className: 'tag is-warn'
         }, e);
@@ -1311,21 +1309,21 @@ function (_super) {
       var issueLink = _this.props.paper.IssueLink.trim();
 
       if (issueLink == '') return '';
-      return react_default.a.createElement("a", {
+      return /*#__PURE__*/react_default.a.createElement("a", {
         href: issueLink,
         target: '_blank',
         style: {
           paddingRight: 0.5 + 'rem'
         }
-      }, react_default.a.createElement("span", {
+      }, /*#__PURE__*/react_default.a.createElement("span", {
         className: 'tag is-success is-light'
       }, "Issue"));
     };
 
     _this.createTitle = function () {
-      return react_default.a.createElement("p", {
+      return /*#__PURE__*/react_default.a.createElement("p", {
         className: 'card-header-title'
-      }, react_default.a.createElement("a", {
+      }, /*#__PURE__*/react_default.a.createElement("a", {
         href: _this.props.paper.PaperLink
       }, _this.props.paper.Title));
     };
@@ -1334,35 +1332,35 @@ function (_super) {
   }
 
   Card.prototype.render = function () {
-    return react_default.a.createElement("div", {
+    return /*#__PURE__*/react_default.a.createElement("div", {
       className: 'column'
-    }, react_default.a.createElement("div", {
+    }, /*#__PURE__*/react_default.a.createElement("div", {
       className: 'card',
       key: this.props.idx
-    }, react_default.a.createElement("div", {
+    }, /*#__PURE__*/react_default.a.createElement("div", {
       className: 'card-header'
-    }, react_default.a.createElement("p", {
+    }, /*#__PURE__*/react_default.a.createElement("p", {
       className: 'card-header-title'
-    }, react_default.a.createElement("time", null, "Added: ", this.props.paper.Timestamp))), react_default.a.createElement("div", {
+    }, /*#__PURE__*/react_default.a.createElement("time", null, "Added: ", this.props.paper.Timestamp))), /*#__PURE__*/react_default.a.createElement("div", {
       className: 'card-content'
-    }, this.createTitle(), react_default.a.createElement("p", {
+    }, this.createTitle(), /*#__PURE__*/react_default.a.createElement("p", {
       className: 'card-text'
-    }, this.props.paper.Note)), react_default.a.createElement("footer", {
+    }, this.props.paper.Note)), /*#__PURE__*/react_default.a.createElement("footer", {
       className: 'card-footer'
-    }, react_default.a.createElement("div", {
+    }, /*#__PURE__*/react_default.a.createElement("div", {
       className: 'card-footer-item'
-    }, react_default.a.createElement("div", {
+    }, /*#__PURE__*/react_default.a.createElement("div", {
       className: 'tags are-medium'
-    }, react_default.a.createElement(modal, {
+    }, /*#__PURE__*/react_default.a.createElement(modal, {
       title: this.props.paper.Title,
       firstAuthor: this.createFirstAuthor(),
       authors: this.createAuthors(),
       year: this.props.paper.Year,
       source: this.props.paper.Source,
       paperType: this.props.paper.PaperType
-    }), this.createGitHubIssueLink(), react_default.a.createElement("span", {
+    }), this.createGitHubIssueLink(), /*#__PURE__*/react_default.a.createElement("span", {
       className: 'tag is-primary is-light'
-    }, this.props.paper.SourceShort), react_default.a.createElement("span", {
+    }, this.props.paper.SourceShort), /*#__PURE__*/react_default.a.createElement("span", {
       className: 'tag is-danger is-light'
     }, this.props.paper.Year), this.createKeywords())))));
   };
@@ -1416,19 +1414,19 @@ function (_super) {
   }
 
   Form.prototype.render = function () {
-    return react_default.a.createElement("section", {
+    return /*#__PURE__*/react_default.a.createElement("section", {
       style: {
         padding: 1 + 'rem'
       }
-    }, react_default.a.createElement("div", {
+    }, /*#__PURE__*/react_default.a.createElement("div", {
       className: "container"
-    }, react_default.a.createElement("div", {
+    }, /*#__PURE__*/react_default.a.createElement("div", {
       className: "field"
-    }, react_default.a.createElement("label", {
+    }, /*#__PURE__*/react_default.a.createElement("label", {
       className: "label"
-    }, "Query"), react_default.a.createElement("div", {
+    }, "Query"), /*#__PURE__*/react_default.a.createElement("div", {
       className: "control"
-    }, react_default.a.createElement("input", {
+    }, /*#__PURE__*/react_default.a.createElement("input", {
       type: "text",
       className: "input",
       placeholder: "Named Entity Recognition",
@@ -1479,22 +1477,22 @@ function (_super) {
   }
 
   LoadingContainer.prototype.render = function () {
-    return react_default.a.createElement("section", {
+    return /*#__PURE__*/react_default.a.createElement("section", {
       style: {
         padding: 3 + 'rem'
       }
-    }, react_default.a.createElement("div", {
+    }, /*#__PURE__*/react_default.a.createElement("div", {
       className: "container"
-    }, react_default.a.createElement("div", {
+    }, /*#__PURE__*/react_default.a.createElement("div", {
       className: "columns"
-    }, react_default.a.createElement("div", {
+    }, /*#__PURE__*/react_default.a.createElement("div", {
       className: "column"
-    }), react_default.a.createElement("div", {
+    }), /*#__PURE__*/react_default.a.createElement("div", {
       className: "column is-one-third"
-    }, react_default.a.createElement("progress", {
+    }, /*#__PURE__*/react_default.a.createElement("progress", {
       className: "progress is-medium is-dark",
       max: "100"
-    }, "Loading...")), react_default.a.createElement("div", {
+    }, "Loading...")), /*#__PURE__*/react_default.a.createElement("div", {
       className: "column"
     }))));
   };
@@ -1610,21 +1608,21 @@ function (_super) {
 
   Paper.prototype.render = function () {
     if (!this.state.filt) {
-      return react_default.a.createElement(loading, null);
+      return /*#__PURE__*/react_default.a.createElement(loading, null);
     }
 
-    return react_default.a.createElement("div", null, react_default.a.createElement(molecules_form, {
+    return /*#__PURE__*/react_default.a.createElement("div", null, /*#__PURE__*/react_default.a.createElement(molecules_form, {
       updateContents: this.filterContentsByQuery
-    }), react_default.a.createElement("section", {
+    }), /*#__PURE__*/react_default.a.createElement("section", {
       style: {
         padding: 3 + 'rem'
       }
-    }, react_default.a.createElement("div", {
+    }, /*#__PURE__*/react_default.a.createElement("div", {
       className: "container"
-    }, react_default.a.createElement("div", {
+    }, /*#__PURE__*/react_default.a.createElement("div", {
       className: "columns"
     }, this.state.filt.map(function (paper, idx) {
-      return react_default.a.createElement(card, {
+      return /*#__PURE__*/react_default.a.createElement(card, {
         paper: paper,
         idx: idx,
         key: idx
@@ -1675,17 +1673,17 @@ function (_super) {
   }
 
   Footer.prototype.render = function () {
-    return react["createElement"]("footer", {
+    return /*#__PURE__*/react["createElement"]("footer", {
       className: "footer",
       style: {
         backgroundColor: 'hsl(0, 0%, 95%)'
       }
-    }, react["createElement"]("div", {
+    }, /*#__PURE__*/react["createElement"]("div", {
       className: "content has-text-centered"
-    }, react["createElement"]("span", null, react["createElement"]("a", {
+    }, /*#__PURE__*/react["createElement"]("span", null, /*#__PURE__*/react["createElement"]("a", {
       href: "https://github.com/himkt/interest",
       target: "_brank"
-    }, react["createElement"]("i", {
+    }, /*#__PURE__*/react["createElement"]("i", {
       className: "fab fa-lg fa-github"
     }), " Interest"))));
   };
@@ -1736,7 +1734,7 @@ function (_super) {
   }
 
   App.prototype.render = function () {
-    return react_default.a.createElement("div", null, react_default.a.createElement(header, null), react_default.a.createElement(templates_paper, null), react_default.a.createElement(footer, null));
+    return /*#__PURE__*/react_default.a.createElement("div", null, /*#__PURE__*/react_default.a.createElement(header, null), /*#__PURE__*/react_default.a.createElement(templates_paper, null), /*#__PURE__*/react_default.a.createElement(footer, null));
   };
 
   return App;
@@ -1751,7 +1749,7 @@ var bulma = __webpack_require__(7);
 
 
 
-react_dom_default.a.render(react_default.a.createElement(app, null), document.getElementById('root'));
+react_dom_default.a.render( /*#__PURE__*/react_default.a.createElement(app, null), document.getElementById('root'));
 
 /***/ })
 /******/ ]);
