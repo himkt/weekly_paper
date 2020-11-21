@@ -1288,8 +1288,8 @@ function (_super) {
     var _this = _super.call(this, props) || this;
 
     _this.createKeywords = function () {
-      if (_this.props.paper.Keywords == '') return '';
-      return _this.props.paper.Keywords.split(',').map(function (e, idx) {
+      if (_this.props.paper.keywords == '') return '';
+      return _this.props.paper.keywords.split(',').map(function (e, idx) {
         return /*#__PURE__*/react_default.a.createElement("span", {
           key: idx,
           className: 'tag is-warn'
@@ -1298,15 +1298,15 @@ function (_super) {
     };
 
     _this.createAuthors = function () {
-      return _this.props.paper.Authors.trim().replace(/,/g, ' and ');
+      return _this.props.paper.authors.trim().replace(/,/g, ' and ');
     };
 
     _this.createFirstAuthor = function () {
-      return _this.props.paper.Authors.trim().split(',')[0].split(' ').slice(-1)[0];
+      return _this.props.paper.authors.trim().split(',')[0].split(' ').slice(-1)[0];
     };
 
     _this.createGitHubIssueLink = function () {
-      var issueLink = _this.props.paper.IssueLink.trim();
+      var issueLink = _this.props.paper.issueLink.trim();
 
       if (issueLink == '') return '';
       return /*#__PURE__*/react_default.a.createElement("a", {
@@ -1324,8 +1324,8 @@ function (_super) {
       return /*#__PURE__*/react_default.a.createElement("p", {
         className: 'card-header-title'
       }, /*#__PURE__*/react_default.a.createElement("a", {
-        href: _this.props.paper.PaperLink
-      }, _this.props.paper.Title));
+        href: _this.props.paper.paperLink
+      }, _this.props.paper.title));
     };
 
     return _this;
@@ -1341,28 +1341,28 @@ function (_super) {
       className: 'card-header'
     }, /*#__PURE__*/react_default.a.createElement("p", {
       className: 'card-header-title'
-    }, /*#__PURE__*/react_default.a.createElement("time", null, "Added: ", this.props.paper.Timestamp))), /*#__PURE__*/react_default.a.createElement("div", {
+    }, /*#__PURE__*/react_default.a.createElement("time", null, "Added: ", this.props.paper.timeStamp))), /*#__PURE__*/react_default.a.createElement("div", {
       className: 'card-content'
     }, this.createTitle(), /*#__PURE__*/react_default.a.createElement("p", {
       className: 'card-text'
-    }, this.props.paper.Note)), /*#__PURE__*/react_default.a.createElement("footer", {
+    }, this.props.paper.note)), /*#__PURE__*/react_default.a.createElement("footer", {
       className: 'card-footer'
     }, /*#__PURE__*/react_default.a.createElement("div", {
       className: 'card-footer-item'
     }, /*#__PURE__*/react_default.a.createElement("div", {
       className: 'tags are-medium'
     }, /*#__PURE__*/react_default.a.createElement(modal, {
-      title: this.props.paper.Title,
+      title: this.props.paper.title,
       firstAuthor: this.createFirstAuthor(),
       authors: this.createAuthors(),
-      year: this.props.paper.Year,
-      source: this.props.paper.Source,
-      paperType: this.props.paper.PaperType
+      year: this.props.paper.year,
+      source: this.props.paper.source,
+      paperType: this.props.paper.paperType
     }), this.createGitHubIssueLink(), /*#__PURE__*/react_default.a.createElement("span", {
       className: 'tag is-primary is-light'
-    }, this.props.paper.SourceShort), /*#__PURE__*/react_default.a.createElement("span", {
+    }, this.props.paper.sourceShort), /*#__PURE__*/react_default.a.createElement("span", {
       className: 'tag is-danger is-light'
-    }, this.props.paper.Year), this.createKeywords())))));
+    }, this.props.paper.year), this.createKeywords())))));
   };
 
   return Card;
@@ -1533,38 +1533,6 @@ var paper_extends = undefined && undefined.__extends || function () {
 
 
 
-var toJSON = function toJSON(records) {
-  var recordsArray = records.map(function (r) {
-    return r.split('\t');
-  });
-  var columns = recordsArray[0],
-      papers = recordsArray.slice(1);
-  var papersJson = papers.map(function (paper) {
-    var dict = {};
-
-    for (var i = 0; i < columns.length; i++) {
-      var _key = columns[i].trim();
-
-      var _paper = (paper[i] || '').trim();
-
-      dict[_key] = _paper;
-    }
-
-    return dict;
-  });
-  papersJson.reverse();
-  return papersJson;
-};
-
-var parseTSV = function parseTSV(response) {
-  var records = response.split('\n');
-  records = records.map(function (record) {
-    return record.replace(/\n$/, '');
-  });
-  var papersJson = toJSON(records);
-  return papersJson;
-};
-
 var paper_Paper =
 /** @class */
 function (_super) {
@@ -1573,7 +1541,7 @@ function (_super) {
   function Paper(props) {
     var _this = _super.call(this, props) || this;
 
-    _this.url = 'https://docs.google.com/spreadsheets/d/e/' + '2PACX-1vT9wviFCRSV0iiySFWtTnmtmWp6N3QdWn4bQ-36lk7QlHc9Iz8yHfy6y2d-3F025s5NSYKPb2Hx-Xu7' + '/pub?output=tsv';
+    _this.url = 'https://script.google.com/macros/s/' + 'AKfycbzh0Bz7rPAK9gcbjdJXpccEHTsfL5sQ4X9weX8CSVuwWS_TFF9i/exec';
     _this.state = {
       data: null,
       filt: null
@@ -1586,24 +1554,30 @@ function (_super) {
     var _this = this;
 
     fetch(this.url).then(function (response) {
-      return response.text();
+      return response.json();
     }).then(function (data) {
-      return parseTSV(data);
-    }).then(function (filt) {
       return _this.setState({
-        data: filt,
-        filt: filt
+        data: data,
+        filt: data
       });
     });
   };
 
   Paper.prototype.filterContentsByQuery = function (query) {
-    var filt = this.state.data.filter(function (paper) {
-      return (paper.Title + ' ' + paper.Conference + ' ' + paper.Note + ' ' + paper.Year + ' ' + paper.Source + ' ' + paper.SourceShort + ' ' + paper.Authors).toLowerCase().match(query.toLowerCase());
-    });
-    this.setState({
-      filt: filt
-    });
+    if (this.state.data != null) {
+      var filt = this.state.data.filter(function (paper) {
+        var item = '';
+
+        for (var key in paper) {
+          item += paper[key] + ' ';
+        }
+
+        return item.toLowerCase().match(query.toLowerCase());
+      });
+      this.setState({
+        filt: filt
+      });
+    }
   };
 
   Paper.prototype.render = function () {
