@@ -1068,65 +1068,65 @@ function (_super) {
   }
 
   Header.prototype.render = function () {
-    return /*#__PURE__*/react["createElement"]("nav", {
+    return /*#__PURE__*/react_default.a.createElement("nav", {
       className: "navbar is-transparent is-info"
-    }, /*#__PURE__*/react["createElement"]("div", {
+    }, /*#__PURE__*/react_default.a.createElement("div", {
       className: "container"
-    }, /*#__PURE__*/react["createElement"]("div", {
+    }, /*#__PURE__*/react_default.a.createElement("div", {
       className: "navbar-brand"
-    }, /*#__PURE__*/react["createElement"]("a", {
+    }, /*#__PURE__*/react_default.a.createElement("a", {
       className: "navbar-item",
       href: "https://himkt.github.io/profile"
-    }, /*#__PURE__*/react["createElement"]("img", {
+    }, /*#__PURE__*/react_default.a.createElement("img", {
       src: logo,
       alt: "himkt.github.io/profile",
       width: "93"
-    }))), /*#__PURE__*/react["createElement"]("div", {
+    }))), /*#__PURE__*/react_default.a.createElement("div", {
       id: "navbarExampleTransparentExample",
       className: "navbar-menu"
-    }, /*#__PURE__*/react["createElement"]("div", {
+    }, /*#__PURE__*/react_default.a.createElement("div", {
       className: "navbar-end"
-    }, /*#__PURE__*/react["createElement"]("a", {
+    }, /*#__PURE__*/react_default.a.createElement("a", {
       className: "navbar-item",
       href: "https://himkt.github.io/profile"
-    }, "Home"), /*#__PURE__*/react["createElement"]("div", {
+    }, "Home"), /*#__PURE__*/react_default.a.createElement("div", {
       className: "navbar-item has-dropdown is-hoverable"
-    }, /*#__PURE__*/react["createElement"]("a", {
+    }, /*#__PURE__*/react_default.a.createElement("a", {
       className: "navbar-link"
-    }, "Links"), /*#__PURE__*/react["createElement"]("div", {
+    }, "Links"), /*#__PURE__*/react_default.a.createElement("div", {
       className: "navbar-dropdown is-boxed is-right"
-    }, /*#__PURE__*/react["createElement"]("a", {
+    }, /*#__PURE__*/react_default.a.createElement("a", {
       className: "navbar-item",
       href: "https://twitter.com/himkt"
-    }, "Twitter"), /*#__PURE__*/react["createElement"]("a", {
+    }, "Twitter"), /*#__PURE__*/react_default.a.createElement("a", {
       className: "navbar-item",
       href: "https://twitter.com/hyperparams"
-    }, "Twitter (en)"), /*#__PURE__*/react["createElement"]("a", {
+    }, "Twitter (en)"), /*#__PURE__*/react_default.a.createElement("a", {
       className: "navbar-item",
       href: "https://github.com/himkt"
-    }, "GitHub"), /*#__PURE__*/react["createElement"]("a", {
+    }, "GitHub"), /*#__PURE__*/react_default.a.createElement("a", {
       className: "navbar-item",
       href: "https://note.com/himkt"
-    }, "Note"), /*#__PURE__*/react["createElement"]("a", {
+    }, "Note"), /*#__PURE__*/react_default.a.createElement("a", {
       className: "navbar-item",
       href: "https://qiita.com/klis"
-    }, "Qiita"), /*#__PURE__*/react["createElement"]("a", {
+    }, "Qiita"), /*#__PURE__*/react_default.a.createElement("a", {
       className: "navbar-item",
       href: "https://instagram.com/himamako"
-    }, "Instagram"), /*#__PURE__*/react["createElement"]("hr", {
+    }, "Instagram"), /*#__PURE__*/react_default.a.createElement("hr", {
       className: "navbar-divider"
-    }), /*#__PURE__*/react["createElement"]("a", {
+    }), /*#__PURE__*/react_default.a.createElement("a", {
       className: "navbar-item is-active",
       href: "https://himkt.github.io/profile/resume.pdf",
       target: "_blank"
-    }, "Resume"), /*#__PURE__*/react["createElement"]("a", {
+    }, "Resume"), /*#__PURE__*/react_default.a.createElement("a", {
       className: "navbar-item is-active",
       href: "https://himkt.github.io/interest"
     }, "Interest")))))));
   };
 
   return Header;
-}(react["Component"]);
+}(react_default.a.Component);
 
 /* harmony default export */ var header = (header_Header);
 // CONCATENATED MODULE: ./src/atoms/modal.tsx
@@ -1214,11 +1214,7 @@ function (_super) {
 
   ModalButton.prototype.render = function () {
     if (!this.state) return /*#__PURE__*/react_default.a.createElement("span", null);
-    return /*#__PURE__*/react_default.a.createElement("div", {
-      style: {
-        paddingRight: 0.5 + 'rem'
-      }
-    }, /*#__PURE__*/react_default.a.createElement("div", {
+    return /*#__PURE__*/react_default.a.createElement("div", null, /*#__PURE__*/react_default.a.createElement("div", {
       className: ["modal", this.state.isActive].join(" ")
     }, /*#__PURE__*/react_default.a.createElement("div", {
       className: "modal-background"
@@ -1237,7 +1233,7 @@ function (_super) {
     }, this.createBibTexEntry())), /*#__PURE__*/react_default.a.createElement("footer", {
       className: "modal-card-foot"
     }, /*#__PURE__*/react_default.a.createElement("button", {
-      className: "button is-primary",
+      className: "button is-info",
       onClick: this.closeModal
     }, "Close")))), /*#__PURE__*/react_default.a.createElement("a", null, /*#__PURE__*/react_default.a.createElement("span", {
       className: "tag is-info",
@@ -1416,7 +1412,7 @@ function (_super) {
   Form.prototype.render = function () {
     return /*#__PURE__*/react_default.a.createElement("section", {
       style: {
-        padding: 1 + 'rem'
+        padding: '1rem'
       }
     }, /*#__PURE__*/react_default.a.createElement("div", {
       className: "container"
@@ -1479,22 +1475,14 @@ function (_super) {
   LoadingContainer.prototype.render = function () {
     return /*#__PURE__*/react_default.a.createElement("section", {
       style: {
-        padding: 3 + 'rem'
+        padding: '3rem'
       }
     }, /*#__PURE__*/react_default.a.createElement("div", {
-      className: "container"
-    }, /*#__PURE__*/react_default.a.createElement("div", {
-      className: "columns"
-    }, /*#__PURE__*/react_default.a.createElement("div", {
-      className: "column"
-    }), /*#__PURE__*/react_default.a.createElement("div", {
-      className: "column is-one-third"
+      className: "container is-max-widescreen"
     }, /*#__PURE__*/react_default.a.createElement("progress", {
       className: "progress is-medium is-dark",
       max: "100"
-    }, "Loading...")), /*#__PURE__*/react_default.a.createElement("div", {
-      className: "column"
-    }))));
+    }, "Loading...")));
   };
 
   return LoadingContainer;
@@ -1589,7 +1577,7 @@ function (_super) {
       updateContents: this.filterContentsByQuery
     }), /*#__PURE__*/react_default.a.createElement("section", {
       style: {
-        padding: 3 + 'rem'
+        padding: '3rem'
       }
     }, /*#__PURE__*/react_default.a.createElement("div", {
       className: "container"
@@ -1647,23 +1635,23 @@ function (_super) {
   }
 
   Footer.prototype.render = function () {
-    return /*#__PURE__*/react["createElement"]("footer", {
+    return /*#__PURE__*/react_default.a.createElement("footer", {
       className: "footer",
       style: {
         backgroundColor: 'hsl(0, 0%, 95%)'
       }
-    }, /*#__PURE__*/react["createElement"]("div", {
+    }, /*#__PURE__*/react_default.a.createElement("div", {
       className: "content has-text-centered"
-    }, /*#__PURE__*/react["createElement"]("span", null, /*#__PURE__*/react["createElement"]("a", {
+    }, /*#__PURE__*/react_default.a.createElement("span", null, /*#__PURE__*/react_default.a.createElement("a", {
       href: "https://github.com/himkt/interest",
       target: "_brank"
-    }, /*#__PURE__*/react["createElement"]("i", {
+    }, /*#__PURE__*/react_default.a.createElement("i", {
       className: "fab fa-lg fa-github"
     }), " Interest"))));
   };
 
   return Footer;
-}(react["Component"]);
+}(react_default.a.Component);
 
 /* harmony default export */ var footer = (footer_Footer);
 // CONCATENATED MODULE: ./src/app.tsx
