@@ -1329,7 +1329,7 @@ function (_super) {
 
   Card.prototype.render = function () {
     return /*#__PURE__*/react_default.a.createElement("div", {
-      className: 'column'
+      className: 'column is-3-desktop is-6-tablet'
     }, /*#__PURE__*/react_default.a.createElement("div", {
       className: 'card',
       key: this.props.idx
@@ -1582,7 +1582,7 @@ function (_super) {
     }, /*#__PURE__*/react_default.a.createElement("div", {
       className: "container"
     }, /*#__PURE__*/react_default.a.createElement("div", {
-      className: "columns"
+      className: "columns is-multiline"
     }, this.state.filt.map(function (paper, idx) {
       return /*#__PURE__*/react_default.a.createElement(card, {
         paper: paper,
